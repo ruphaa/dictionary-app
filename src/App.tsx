@@ -10,7 +10,7 @@ function App() {
         <p>
           Dictionary App
         </p>
-        <Input />
+        <Input/>
       </header>
     </div>
   );
