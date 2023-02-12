@@ -14,14 +14,6 @@ const Placeholder = () => {
   )
 }
 
-const NotFound = () => {
-  return (
-    <div>
-      404, cannot find the word, try another word.
-    </div>
-  )
-}
-
 const Meaning = ({ meaning }: { meaning: MeaningProp }) => {
   return (
     <div className={styles.speech}>
@@ -84,6 +76,7 @@ export const Definition = () => {
                 href={definition.sourceUrls[0]}
                 className={styles.link}
                 target="_blank"
+                rel="noreferrer"
               >
                 {definition.sourceUrls[0]}
               </a>

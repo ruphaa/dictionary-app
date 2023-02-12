@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Input } from "../input/input";
 import { useDictionaryContext } from "../../context/dictionaryContext";
 import { getWordDefinition } from "../../services/service";
@@ -13,7 +13,7 @@ export const Search = () => {
 
     const handleSubmit = (event: React.KeyboardEvent<HTMLInputElement>) => {
         // Do form validation
-        if(event.key == "Enter") {
+        if(event.key === "Enter") {
             if(searchTerm && searchTerm.length) {
                 // Make an API call
                 getWordDefinition(searchTerm)

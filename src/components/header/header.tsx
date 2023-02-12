@@ -48,7 +48,7 @@ export const Header = () => {
                     className={styles.toggle} 
                     role="switch" 
                     onChange={toggleTheme}
-                    checked={theme == "dark"}
+                    checked={theme === "dark"}
                 />
             </div>
         </div>
