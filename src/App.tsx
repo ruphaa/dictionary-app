@@ -1,17 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Input } from "./components/input/input";
+import styles from './App.module.css';
+import { Search } from "./components/search/search";
+import { Definition } from "./components/definition/definition";
+import { DictionaryProvider } from "./context/dictionaryContext";
+import { Header } from "./components/header/header";
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Dictionary App
-        </p>
-        <Input/>
-      </header>
+    <div className={styles.App}>
+      <Header/>
+      <main className={styles.main}>
+        <DictionaryProvider>
+          <Search/>
+          <Definition/>
+        </DictionaryProvider>
+      </main>
     </div>
   );
 }
